@@ -29,3 +29,8 @@ The dependencies are broken
 One window, one tab, one screen
 Do the comments tell the whole story?
 The innocent TODO is a critical
+Articulate hidden cycles
+How can the state machine move backward?
+Reverse the flow
+By any means necessary, try all combinations
+
