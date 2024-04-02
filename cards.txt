@@ -1,0 +1,31 @@
+Ignore access control
+Use only a terminal (or: do not use the terminal)
+Rewrite the tests without looking
+Explain the whole system to a child
+You learn only one secret. What's next?
+You have one million dollars but you can only attack one function
+What if you could force the function to execute twice?
+You have full access for only 60 seconds. What do you do?
+Start by reading the git history
+How could an old bug come back?
+Find the code that the developer hates the most
+Delete a random file. What depends on it?
+Write your ideas by hand. Limit yourself to one sheet of paper
+What if all input was sent in reverse?
+First, read the documentation of the dependencies
+Assume the math is wrong
+Slowly, then all at once
+What if it was done your way?
+Write the proof-of-concept before finding the exploit
+Stop at once. Sleep on it
+Go offline
+Where is the best place to hide?
+Use unacceptable numbers
+Change the encoding
+How could corruption impact reliability? How could unreliability cause corruption?
+The developer lets you change 20 lines of code
+What if you knew you couldn't be caught?
+The dependencies are broken
+One window, one tab, one screen
+Do the comments tell the whole story?
+The innocent TODO is a critical
