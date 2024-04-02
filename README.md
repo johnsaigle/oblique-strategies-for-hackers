@@ -10,7 +10,7 @@ Transcend technicalities and explore the mysterious regions of the mind via rand
 
 Choose a random 'card' from the list:
 
-```sh
+```
 $ shuf -n 1 cards.txt
 What if all input was sent in reverse?
 ```
