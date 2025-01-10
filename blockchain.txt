@@ -1,0 +1,26 @@
+What if you could replay the same block twice?
+Every transaction arrives out of order
+The gas price is infinite
+Assume the timestamp can be manipulated
+What if miners could see your transaction before anyone else?
+You control 1% of the validators, what's possible?
+The price oracle is always wrong
+Make the token deflate faster than intended
+Every address is a contract
+What happens between block confirmations?
+Reorder everything that can be reordered
+What if you could predict the next random number?
+Force it to revert halfway
+The upgrade proxy points the wrong way
+Make the cheapest operation the most expensive
+What happens at the edge of uint256?
+You can only front-run, never back-run
+The constructor never finished
+Every call must go through another contract first
+What if ETH was worth zero?
+Make governance vote against itself
+The oldest transaction wins
+You can only interact through delegatecalls
+The fallback function is the only function
+The base fee makes no sense
+The same account appears twice in one instruction

@@ -33,4 +33,29 @@ Articulate hidden cycles
 How can the state machine move backward?
 Reverse the flow
 By any means necessary, try all combinations
-
+What if every error was silent?
+Make the fast path slow, make the slow path fast
+Pretend the logs are lying to you
+The bug only happens on Tuesdays
+Write the exploit in a language you've never used
+What's the smallest change that could cause the most damage?
+Replace all strings with emojis
+The attacker can only use printable ASCII
+Imagine the system was built upside down
+What if memory never freed?
+You can only move data, not modify it
+The compiler is compromised
+Every third request fails
+Time moves backwards
+Treat warnings as features
+What if you could only use environment variables?
+The documentation is in a language you don't speak
+Every function must return true
+Write the exploit without using numbers
+What happens at the edge of integer space?
+The system is perfect except for one thing
+The API is rate limited to one call per hour
+What if NULL was a valid value everywhere?
+The bug only reproduces in leap years
+What if the entropy was predictable?
+Transform valid input until it becomes invalid
