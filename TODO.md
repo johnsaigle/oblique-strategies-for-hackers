@@ -1,4 +1,0 @@
-- Create simple web app that displays each "card" to a user
-- There should be a button to draw a new card
-- Aesthetic style: simple, clear, bold, black and white e.g. Cards Against Humanity cards
-- All of this can be done in HTML/client-side JS

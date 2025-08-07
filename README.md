@@ -8,6 +8,12 @@ Transcend technicalities and explore the mysterious regions of the mind via rand
 
 ## Usage
 
+### Web App
+
+Open `index.html` in a browser.
+
+
+### CLI
 Choose a random 'card' from the list:
 
 ```

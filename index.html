@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oblique Strategies for Hackers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: #333;
+            color: #fff;
+            border: 2px solid #555;
+            border-radius: 16px;
+            padding: 60px 40px;
+            margin: 40px 0;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+            border-color: #aaa;
+            transform: scale(1.02);
+        }
+
+        .card-text {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: center;
+            font-style: italic;
+            transition: opacity 0.2s ease;
+        }
+
+        .card-text.fading {
+            opacity: 0.3;
+        }
+
+        .draw-hint {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .card-index {
+            color: #666;
+            font-size: 0.8rem;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-style: normal;
+        }
+
+        .page-title {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: #2a2a2a;
+            font-size: 2.5rem;
+            font-weight: normal;
+            font-style: italic;
+            font-family: 'Georgia', serif;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .page-title:hover {
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://github.com/johnsaigle/oblique-strategies-for-hackers" class="page-title">Oblique Strategies for Hackers</a>
+    
+    <div class="container">
+        <div class="card" id="card" onclick="drawCard()">
+            <div class="card-index" id="card-index"></div>
+            <div class="card-text" id="card-text"></div>
+        </div>
+        
+        <div class="draw-hint">Click the card for another</div>
+    </div>
+
+    <script>
+        const cards = [
+            "Ignore access control",
+            "Use only a terminal (or: do not use the terminal)",
+            "Rewrite the tests without looking",
+            "Explain the whole system to a child",
+            "You learn only one secret. What's next?",
+            "You have one million dollars but you can only attack one function",
+            "What if you could force the function to execute twice?",
+            "You have full access for only 60 seconds. What do you do?",
+            "Start by reading the git history",
+            "How could an old bug come back?",
+            "Find the code that the developer hates the most",
+            "Delete a random file. What depends on it?",
+            "Write your ideas by hand. Limit yourself to one sheet of paper",
+            "What if all input was sent in reverse?",
+            "First, read the documentation of the dependencies",
+            "Assume the math is wrong",
+            "Slowly, then all at once",
+            "What if it was done your way?",
+            "Write the proof-of-concept before finding the exploit",
+            "Stop at once. Sleep on it",
+            "Go offline",
+            "Where is the best place to hide?",
+            "Use unacceptable numbers",
+            "Change the encoding",
+            "How could corruption impact reliability? How could unreliability cause corruption?",
+            "The developer lets you change 20 lines of code",
+            "What if you knew you couldn't be caught?",
+            "The dependencies are broken",
+            "One window, one tab, one screen",
+            "Do the comments tell the whole story?",
+            "The innocent TODO is a critical",
+            "Articulate hidden cycles",
+            "How can the state machine move backward?",
+            "Reverse the flow",
+            "By any means necessary, try all combinations",
+            "What if every error was silent?",
+            "Make the fast path slow, make the slow path fast",
+            "Pretend the logs are lying to you",
+            "The bug only happens on Tuesdays",
+            "Write the exploit in a language you've never used",
+            "What's the smallest change that could cause the most damage?",
+            "Replace all strings with emojis",
+            "The attacker can only use printable ASCII",
+            "Imagine the system was built upside down",
+            "What if memory never freed?",
+            "You can only move data, not modify it",
+            "The compiler is compromised",
+            "Every third request fails",
+            "Time moves backwards",
+            "Treat warnings as features",
+            "What if you could only use environment variables?",
+            "The documentation is in a language you don't speak",
+            "Every function must return true",
+            "Write the exploit without using numbers",
+            "What happens at the edge of integer space?",
+            "The system is perfect except for one thing",
+            "The API is rate limited to one call per hour",
+            "What if NULL was a valid value everywhere?",
+            "The bug only reproduces in leap years",
+            "What if the entropy was predictable?",
+            "Transform valid input until it becomes invalid",
+            "Work with only one browser tab open",
+            "Use a different operating system for this task",
+            "Approach this as if you were 12 years old",
+            "What would happen if you had infinite time?",
+            "Solve this using only command line tools",
+            "What would the victim think is impossible?",
+            "Assume the obvious solution is a trap",
+            "What if this system was designed by your enemy?",
+            "Look for what everyone else is ignoring",
+            "What would break if you were too successful?",
+            "Start from the error messages",
+            "Map the trust boundaries first",
+            "Follow the money, not the code",
+            "What assumptions does the developer make about users?",
+            "Find the code that runs at 3 AM",
+            "Embrace the uncomfortable silence",
+            "What if security was an illusion?",
+            "The most dangerous code is the code that works",
+            "Trust nothing, verify everything, doubt verification",
+            "What would you do if failure was impossible?"
+        ];
+
+        let usedCards = [];
+        let currentCardIndex = -1;
+
+        function drawCard() {
+            const cardText = document.getElementById('card-text');
+            const cardIndex = document.getElementById('card-index');
+            
+            if (usedCards.length >= cards.length) {
+                usedCards = [];
+            }
+            
+            let availableIndices = [];
+            for (let i = 0; i < cards.length; i++) {
+                if (!usedCards.includes(i)) {
+                    availableIndices.push(i);
+                }
+            }
+            
+            const randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
+            usedCards.push(randomIndex);
+            currentCardIndex = randomIndex;
+            
+            // Fade out
+            cardText.classList.add('fading');
+            
+            setTimeout(() => {
+                // Update content
+                cardText.textContent = cards[randomIndex];
+                cardIndex.textContent = `${randomIndex + 1}/${cards.length}`;
+                
+                // Fade back in
+                cardText.classList.remove('fading');
+            }, 100);
+        }
+
+        window.addEventListener('load', () => {
+            drawCard();
+        });
+    </script>
+</body>
+</html>

@@ -59,3 +59,23 @@ What if NULL was a valid value everywhere?
 The bug only reproduces in leap years
 What if the entropy was predictable?
 Transform valid input until it becomes invalid
+Work with only one browser tab open
+Use a different operating system for this task
+Approach this as if you were 12 years old
+What would happen if you had infinite time?
+Solve this using only command line tools
+What would the victim think is impossible?
+Assume the obvious solution is a trap
+What if this system was designed by your enemy?
+Look for what everyone else is ignoring
+What would break if you were too successful?
+Start from the error messages
+Map the trust boundaries first
+Follow the money, not the code
+What assumptions does the developer make about users?
+Find the code that runs at 3 AM
+Embrace the uncomfortable silence
+What if security was an illusion?
+The most dangerous code is the code that works
+Trust nothing, verify everything, doubt verification
+What would you do if failure was impossible?
